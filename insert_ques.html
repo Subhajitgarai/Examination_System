@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Insert Questins</title>
+    <style>
+      body {
+        background-color: #ffffff;
+        font-family: Arial, sans-serif;
+      }
+
+      form {
+        background-color: #088F8F;
+        padding: 30px;
+        border-radius: 5px;
+        box-shadow: 0px 0px 10px 2px #d3d3d3;
+        max-width: 1900px;
+        margin: 0 auto;
+      }
+
+      h1 {
+        text-align: center;
+        font-size: 24px;
+        color: #000000;
+      }
+
+      label {
+        display: block;
+        margin-bottom: 10px;
+        font-size: 16px;
+        color: #000000;
+      }
+
+      input[type="text"],
+      textarea {
+        padding: 10px;
+        margin-bottom: 20px;
+        border: none;
+        border-radius: 5px;
+        box-shadow: 0px 0px 5px 1px #000000;
+        width: 100%;
+      }
+
+      input[type="submit"] {
+        background-color: #000000;
+        color: #fff;
+        border: none;
+        border-radius: 5px;
+        padding: 10px 20px;
+        font-size: 16px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+      }
+
+      input[type="submit"]:hover {
+        background-color: #3e8e41;
+      }
+    </style>
+  </head>
+  <body>
+    <form action="insert_quess.jsp" action="get">
+      <h1>Insert Question Details</h1>
+      <label for="qid">Enter Qid:</label>
+      <input type="text" name="qid" id="qid" required placeholder="Enter Question id">
+      <label for="subject">Enter Subject:</label>
+      <input type="text" name="subject" id="subject" required placeholder="Enter Subject">
+      <label for="ques">Enter Question:</label>
+      <textarea name="ques" id="ques" rows="3" required placeholder="Enter Question"></textarea>
+      <label for="opta">Enter Option a:</label>
+      <input type="text" name="opta" id="opta" required placeholder="Enter First Option">
+      <label for="optb">Enter Option b:</label>
+      <input type="text" name="optb" id="optb" required  placeholder="Enter Second Option">
+      <label for="optc">Enter Option c:</label>
+      <input type="text" name="optc" id="optc" required placeholder="Enter Third Option">
+      <label for="optd">Enter Option d:</label>
+      <input type="text" name="optd" id="optd" required placeholder="Enter Fourth Option">
+      <label for="cans">Enter Correct answer:</label>
+      <input type="text" name="cans" id="cans" required placeholder="Enter Correct Option [a/b/c/d]">
+      <input type="submit" value="Insert">
+    </form>
+  </body>
+</html>
+
+
+
+
+<!-- <html>
+    <body>
+        <link rel="stylesheet" href="insert_studentinfo.css">
+        <center>
+            <form action="insert_quess" action="get">
+                Enter Qid <input type="text" name="qid"><br><br>
+                Enter Subject <input type="text" name="subject"><br><br>
+                Enter Question <input type="text" name="ques"><br><br>
+                Enter Option a <input type="text" name="opta"><br><br>
+                Enter Option b <input type="text" name="optb"><br><br>
+                Enter Option c <input type="text" name="optc"><br><br>
+                Enter Option d <input type="text" name="optd"><br><br>
+                Enter Correct answer <input type="text" name="cans"><br><br>
+                <input type="submit" value="Insert">
+                
+            </form>
+        </center>
+    </body>
+</html> -->

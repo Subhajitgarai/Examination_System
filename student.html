@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Student Login</title>
+	<link rel="stylesheet" href="Student.css">
+	<style>
+		
+		body {
+
+			background-color: #f2f2f2;
+			font-family: Arial, sans-serif;
+		}
+		.container {
+			width: 400px;
+			height: 270px;
+			margin: 0 auto;
+			margin-top: 50px;
+			background-color: #000000;
+			padding: 20px;
+			border-radius: 5px;
+			box-shadow: 0 2px 5px #088F8F;
+			margin-left: 220px;
+			margin-top: 290px;
+		}
+		h1 {
+			font-size: 24px;
+			color: #088F8F;
+			margin-bottom: 20px;
+			text-align: center;
+		}
+		form {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+		}
+		label {
+			font-size: 16px;
+			color: #fff;
+			margin-bottom: 10px;
+			text-align: left;
+			width: 100%;
+		}
+		input[type="text"], input[type="password"] {
+			width: 100%;
+			padding: 10px;
+			border-radius: 5px;
+			border: 1px solid #088F8F;
+			margin-bottom: 20px;
+			box-sizing: border-box;
+		}
+		button[type="submit"] {
+			background-color: #088F8F;
+			color: #fff;
+			padding: 10px 20px;
+			border-radius: 5px;
+			border: none;
+			cursor: pointer;
+			transition: background-color 0.3s ease-in-out;
+		}
+		button[type="submit"]:hover {
+			background-color: #555;
+		}
+	</style>
+	<script>
+		function func1()
+		{
+			var pvalue=document.getElementById("pass1").value
+			var pvalue1=document.getElementById("pass2").value
+			if(pvalue=="")
+			{
+			  alert("Student Id field should not be empty");
+			  document.getElementById("pass1").focus()
+			   return false
+			}
+			if(isNaN(pvalue))
+			{
+				alert("Student_id should be numeric.");
+				pvalue=""
+				document.getElementById("pass1").focus()
+				return false
+			}
+			if(pvalue1=="")
+			{
+			   alert("Password field should not be empty");
+			   document.getElementById("pass2").focus()
+			   return false
+			}
+      			
+		}
+	</script>
+</head>
+<body>
+	<div class="container">
+		<h1>Student Login</h1>
+		<form action="students.jsp" method="post" onsubmit="return func1()">
+			<label for="username">Student_Id:</label>
+			<input type="text" name="student_id"  placeholder=" Enter Your Roll Number" id="pass1">
+			<label for="password">Password:</label>
+			<input type="password"  name="pass"placeholder=" Enter Your Password" id="pass2">
+			<button type="submit">Login</button>
+		</form>
+	</div>
+</body>
+</html>
+
+
+
+
+
+<!-- <html>
+    <body style="background-color: #f7f7f7; font-family: Arial, sans-serif;">
+        <center>
+            <form action="students" method="get">
+                <label style="font-size: 16px; font-weight: bold;">Enter Student ID:</label>
+                <input type="text" name="student_id" style="padding: 8px; border-radius: 4px; border: 1px solid #ccc;"><br><br>
+                <label style="font-size: 16px; font-weight: bold;">Enter password:</label>
+                <input type="password" name="pass" style="padding: 8px; border-radius: 4px; border: 1px solid #ccc;"><br><br>
+                <input type="submit" value="Submit" style="background-color: #4CAF50; color: #fff; padding: 10px 16px; border: none; border-radius: 4px; cursor: pointer;">
+            </form>
+        </center>
+    </body>
+</html> -->

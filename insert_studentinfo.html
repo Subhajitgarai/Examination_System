@@ -1,0 +1,50 @@
+<html>
+<title>Insert Student Information</title>
+<head>
+    <script>
+        function fun1()
+        {
+            var pvalue=document.getElementById("pass1").value
+            var pvalue1=document.getElementById("pass2").value
+            if(isNaN(pvalue))
+            {
+                alert("Roll number should be numeric.");
+                document.getElementById("pass1").value=""
+                document.getElementById("pass1").focus()
+                return false
+            }
+            if(isNaN(pvalue1))
+            {
+                alert("Mobile no number should be numeric.");
+                document.getElementById("pass2").value=""
+                document.getElementById("pass2").focus()
+                return false
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <link rel="stylesheet" href="updatestudent.css">
+    <form action="insert_studentinfos.jsp" action="post" onsubmit="return fun1()">
+        <center>
+
+            <h3>Enter Roll no </h3><input type="text" name="roll" required placeholder="Enter Roll Number" id="pass1">
+            <h3>Enter Name </h3><input type="text" name="name" required placeholder="Enter Full Name">
+            <h3>Enter pass </h3><input type="text" name="pass" required placeholder="Enter Password">
+            <h3>Enter collage </h3><input type="text" name="collage" required placeholder="Enter Collage name">
+            <h3>Enter address </h3><input type="text" name="add" required placeholder="Enter Address">
+            <h3>Enter mob_no </h3><input type="text" name="mob_no" required placeholder="Enter Mobile Number" id="pass2">
+            <h3>Enter sem </h3><input type="text" name="sem" required placeholder="Enter Semester">
+            <h3>Enter dept </h3><input type="text" name="dept" required placeholder="Enter Deparment">
+
+            <input type="submit" value="Submit">
+
+
+        </center>
+    </form>
+</body>
+
+</html>
+
+<!-- insert_studentinfo -->
